@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210222 16:03:18.818" rpa="false">
+<suite id="s1" name="Videos List" source="C:\Users\ADMIN\PycharmProjects\robot\TestCase\Videos_List.robot">
+<kw name="Open Nanacara App And Login successfully" library="Common" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION} deviceName=${DEVICE_NAME} automationName=UiAutomator2</arg>
+<arg>newCommandTimeout=2500</arg>
+<arg>appActivity=${Activity_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:03:19.418" endtime="20210222 16:03:34.885"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${TUTORIAL_SCREEN_LOGIN_BUTTON}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:03:34.885" endtime="20210222 16:03:46.093"></status>
+</kw>
+<kw name="Click Login Button At Tutorial Screen" library="Common">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TUTORIAL_SCREEN_LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210222 16:03:46.102" level="INFO">Clicking element '//android.widget.TextView[@text='ログイン']'.</msg>
+<status status="PASS" starttime="20210222 16:03:46.094" endtime="20210222 16:03:46.382"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_EMAIL_TEXTBOX}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:03:46.383" endtime="20210222 16:03:48.202"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:03:46.094" endtime="20210222 16:03:48.202"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TUTORIAL_SCREEN_LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210222 16:03:48.211" level="INFO">Clicking element '//android.widget.TextView[@text='ログイン']'.</msg>
+<status status="PASS" starttime="20210222 16:03:48.203" endtime="20210222 16:03:48.495"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_EMAIL_TEXTBOX}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:03:48.495" endtime="20210222 16:03:48.682"></status>
+</kw>
+<kw name="Input Email In Login Screen" library="Login_Keyword">
+<arguments>
+<arg>${email_input}</arg>
+</arguments>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_EMAIL_TEXTBOX}</arg>
+<arg>${email_text}</arg>
+</arguments>
+<msg timestamp="20210222 16:03:48.691" level="INFO">Typing text 'hiep.codecomplete@gmail.com' into text field '//android.widget.TextView[@text='パスワード']/preceding::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText'</msg>
+<status status="PASS" starttime="20210222 16:03:48.684" endtime="20210222 16:03:49.753"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:03:48.683" endtime="20210222 16:03:49.754"></status>
+</kw>
+<kw name="Input Password In Login Screen" library="Login_Keyword">
+<arguments>
+<arg>${password_input}</arg>
+</arguments>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_PASSWORD_TEXTBOX}</arg>
+<arg>${password_text}</arg>
+</arguments>
+<msg timestamp="20210222 16:03:49.765" level="INFO">Typing password into text field '//android.widget.TextView[@text='パスワード']/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText'</msg>
+<status status="PASS" starttime="20210222 16:03:49.756" endtime="20210222 16:03:50.471"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:03:49.754" endtime="20210222 16:03:50.471"></status>
+</kw>
+<kw name="Click Login Button" library="Login_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210222 16:03:50.480" level="INFO">Clicking element '//android.widget.ScrollView//android.widget.TextView[@text='ログイン']'.</msg>
+<status status="PASS" starttime="20210222 16:03:50.472" endtime="20210222 16:03:51.173"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:03:50.472" endtime="20210222 16:03:51.173"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${TOP_PAGE_SCREEN_ALLOW_BUTTON}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:03:51.173" endtime="20210222 16:04:00.335"></status>
+</kw>
+<kw name="Click Allow Button" library="Login_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TOP_PAGE_SCREEN_ALLOW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:00.345" level="INFO">Clicking element '//android.widget.Button[@text='ALLOW']'.</msg>
+<status status="PASS" starttime="20210222 16:04:00.337" endtime="20210222 16:04:01.622"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:00.335" endtime="20210222 16:04:01.622"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${TOP_PAGE_SCREEN_ALLOW_BUTTON}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:01.623" endtime="20210222 16:04:03.112"></status>
+</kw>
+<kw name="Click Allow Button" library="Login_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TOP_PAGE_SCREEN_ALLOW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:03.124" level="INFO">Clicking element '//android.widget.Button[@text='ALLOW']'.</msg>
+<status status="PASS" starttime="20210222 16:04:03.113" endtime="20210222 16:04:03.324"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:03.112" endtime="20210222 16:04:03.324"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${BOTTLE_SCREEN_SETTING_ICON}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:03.325" endtime="20210222 16:04:03.999"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:03:19.417" endtime="20210222 16:04:04.000"></status>
+</kw>
+<test id="s1-t1" name="Check UI List Of Seizure Recordings Video Screen (Small Thumbnail And Infor)">
+<kw name="Click In Heart Icon In Bottle Screen" library="Footer_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTTLE_SCREEN_HEART_ICON}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:04.012" level="INFO">Clicking element '//android.widget.TextView[@text='発作管理']/parent::android.view.ViewGroup/parent::android.view.ViewGroup[@index='1']/parent::android.view.ViewGroup'.</msg>
+<status status="PASS" starttime="20210222 16:04:04.003" endtime="20210222 16:04:04.450"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${MANAGEMENT_SCREEN_TITLE}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:04.450" endtime="20210222 16:04:07.637"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:04.002" endtime="20210222 16:04:07.637"></status>
+</kw>
+<kw name="Click On Videos List Tab In Management Screen" library="Management_Keyword">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${MANAGEMENT_SCREEN_VIDEOS_LIST_TEXT_BOX}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:07.641" endtime="20210222 16:04:08.144"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MANAGEMENT_SCREEN_VIDEOS_LIST_TEXT_BOX}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:08.154" level="INFO">Clicking element '//android.view.ViewGroup/android.widget.TextView[@text='録画記録一覧']'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210222 16:04:09.715" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210222 16:04:08.791" endtime="20210222 16:04:09.716"></status>
+</kw>
+<msg timestamp="20210222 16:04:09.732" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error in building: Ill-formed XML document (multiple root elements detected). Try changing the 'normalizeTagNames' driver setting to 'true' in order to workaround the problem.
+</msg>
+<status status="FAIL" starttime="20210222 16:04:08.145" endtime="20210222 16:04:09.732"></status>
+</kw>
+<status status="FAIL" starttime="20210222 16:04:07.640" endtime="20210222 16:04:09.733"></status>
+</kw>
+<doc>NANACA-996</doc>
+<status status="FAIL" starttime="20210222 16:04:04.000" endtime="20210222 16:04:09.734" critical="yes">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error in building: Ill-formed XML document (multiple root elements detected). Try changing the 'normalizeTagNames' driver setting to 'true' in order to workaround the problem.
+</status>
+</test>
+<test id="s1-t2" name="Check Behavior When Uploading Video To S3 After Recording Seizure Video (Case Close App)">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Click In Setting Icon In Bottle Screen</arg>
+</arguments>
+<kw name="Click In Setting Icon In Bottle Screen" library="Footer_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTTLE_SCREEN_SETTING_ICON}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:09.751" level="INFO">Clicking element '//android.widget.TextView[@text='アカウント']'.</msg>
+<status status="PASS" starttime="20210222 16:04:09.742" endtime="20210222 16:04:11.185"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:09.741" endtime="20210222 16:04:11.186"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:09.740" endtime="20210222 16:04:11.186"></status>
+</kw>
+<kw name="AND Click In Video Save Setting In My Page Screen" library="My_Page_Keyword">
+<kw name="${i} IN RANGE [ 10 ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210222 16:04:12.719" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210222 16:04:11.884" endtime="20210222 16:04:12.719"></status>
+</kw>
+<msg timestamp="20210222 16:04:12.720" level="FAIL">ValueError: Element locator '//android.widget.TextView[@text='動画保存先設定']' did not match any elements.</msg>
+<status status="FAIL" starttime="20210222 16:04:11.191" endtime="20210222 16:04:12.720"></status>
+</kw>
+<msg timestamp="20210222 16:04:12.721" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20210222 16:04:11.190" endtime="20210222 16:04:12.721"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:12.723" endtime="20210222 16:04:15.112"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:12.721" endtime="20210222 16:04:15.112"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:11.190" endtime="20210222 16:04:15.112"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210222 16:04:16.401" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210222 16:04:15.578" endtime="20210222 16:04:16.402"></status>
+</kw>
+<msg timestamp="20210222 16:04:16.403" level="FAIL">ValueError: Element locator '//android.widget.TextView[@text='動画保存先設定']' did not match any elements.</msg>
+<status status="FAIL" starttime="20210222 16:04:15.114" endtime="20210222 16:04:16.403"></status>
+</kw>
+<msg timestamp="20210222 16:04:16.403" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20210222 16:04:15.113" endtime="20210222 16:04:16.403"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:16.406" endtime="20210222 16:04:20.236"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:16.404" endtime="20210222 16:04:20.236"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:15.112" endtime="20210222 16:04:20.236"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210222 16:04:21.315" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210222 16:04:20.474" endtime="20210222 16:04:21.315"></status>
+</kw>
+<msg timestamp="20210222 16:04:21.316" level="FAIL">ValueError: Element locator '//android.widget.TextView[@text='動画保存先設定']' did not match any elements.</msg>
+<status status="FAIL" starttime="20210222 16:04:20.238" endtime="20210222 16:04:21.316"></status>
+</kw>
+<msg timestamp="20210222 16:04:21.316" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20210222 16:04:20.237" endtime="20210222 16:04:21.316"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:21.318" endtime="20210222 16:04:25.010"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:21.317" endtime="20210222 16:04:25.010"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:20.236" endtime="20210222 16:04:25.010"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:25.012" endtime="20210222 16:04:25.349"></status>
+</kw>
+<msg timestamp="20210222 16:04:25.349" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:25.011" endtime="20210222 16:04:25.349"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:25.360" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:25.351" endtime="20210222 16:04:25.662"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:25.350" endtime="20210222 16:04:25.662"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:25.011" endtime="20210222 16:04:25.662"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:25.664" endtime="20210222 16:04:25.985"></status>
+</kw>
+<msg timestamp="20210222 16:04:25.986" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:25.663" endtime="20210222 16:04:25.986"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:25.998" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:25.988" endtime="20210222 16:04:26.386"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:25.986" endtime="20210222 16:04:26.386"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:25.663" endtime="20210222 16:04:26.386"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:26.388" endtime="20210222 16:04:26.747"></status>
+</kw>
+<msg timestamp="20210222 16:04:26.748" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:26.387" endtime="20210222 16:04:26.748"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:26.759" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:26.750" endtime="20210222 16:04:27.121"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:26.748" endtime="20210222 16:04:27.121"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:26.386" endtime="20210222 16:04:27.121"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:27.123" endtime="20210222 16:04:27.409"></status>
+</kw>
+<msg timestamp="20210222 16:04:27.409" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:27.122" endtime="20210222 16:04:27.410"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:27.421" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:27.412" endtime="20210222 16:04:29.120"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:27.410" endtime="20210222 16:04:29.120"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:27.122" endtime="20210222 16:04:29.121"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:29.122" endtime="20210222 16:04:30.077"></status>
+</kw>
+<msg timestamp="20210222 16:04:30.077" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:29.121" endtime="20210222 16:04:30.078"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:30.088" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:30.079" endtime="20210222 16:04:30.433"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:30.078" endtime="20210222 16:04:30.433"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:29.121" endtime="20210222 16:04:30.433"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:30.435" endtime="20210222 16:04:30.741"></status>
+</kw>
+<msg timestamp="20210222 16:04:30.741" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:30.434" endtime="20210222 16:04:30.741"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:30.753" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:30.743" endtime="20210222 16:04:31.066"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:30.742" endtime="20210222 16:04:31.066"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:30.434" endtime="20210222 16:04:31.067"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:31.068" endtime="20210222 16:04:31.417"></status>
+</kw>
+<msg timestamp="20210222 16:04:31.417" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:31.067" endtime="20210222 16:04:31.417"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='True'</arg>
+<arg>click element</arg>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+<arg>ELSE IF</arg>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>462</arg>
+<arg>1585</arg>
+<arg>483</arg>
+<arg>261</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_VIDEO_SAVE_SETTING}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:31.428" level="INFO">Clicking element '//android.widget.TextView[@text='動画保存先設定']'.</msg>
+<status status="PASS" starttime="20210222 16:04:31.419" endtime="20210222 16:04:31.762"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:31.418" endtime="20210222 16:04:31.762"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:31.067" endtime="20210222 16:04:31.762"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:11.189" endtime="20210222 16:04:31.762"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:11.188" endtime="20210222 16:04:31.762"></status>
+</kw>
+<kw name="AND Turn On Save Video To Server In My Page Screen" library="My_Page_Keyword">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>element should be visible</arg>
+<arg>${MY_PAGE_SCREEN_SAVE_VIDEO_IN_SERVER}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${MY_PAGE_SCREEN_SAVE_VIDEO_IN_SERVER}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:31.766" endtime="20210222 16:04:32.082"></status>
+</kw>
+<msg timestamp="20210222 16:04:32.082" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210222 16:04:31.765" endtime="20210222 16:04:32.082"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='False'</arg>
+<arg>swipe</arg>
+<arg>932</arg>
+<arg>414</arg>
+<arg>1006</arg>
+<arg>418</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:32.082" endtime="20210222 16:04:32.083"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:31.764" endtime="20210222 16:04:32.084"></status>
+</kw>
+<kw name="Click In Heart Icon In Bottle Screen" library="Footer_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTTLE_SCREEN_HEART_ICON}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:32.095" level="INFO">Clicking element '//android.widget.TextView[@text='発作管理']/parent::android.view.ViewGroup/parent::android.view.ViewGroup[@index='1']/parent::android.view.ViewGroup'.</msg>
+<status status="PASS" starttime="20210222 16:04:32.086" endtime="20210222 16:04:32.424"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${MANAGEMENT_SCREEN_TITLE}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:32.424" endtime="20210222 16:04:34.206"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:32.085" endtime="20210222 16:04:34.207"></status>
+</kw>
+<kw name="Click On Videos List Tab In Management Screen" library="Management_Keyword">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${MANAGEMENT_SCREEN_VIDEOS_LIST_TEXT_BOX}</arg>
+</arguments>
+<status status="PASS" starttime="20210222 16:04:34.211" endtime="20210222 16:04:34.485"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MANAGEMENT_SCREEN_VIDEOS_LIST_TEXT_BOX}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:34.493" level="INFO">Clicking element '//android.view.ViewGroup/android.widget.TextView[@text='録画記録一覧']'.</msg>
+<status status="PASS" starttime="20210222 16:04:34.486" endtime="20210222 16:04:34.768"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:34.210" endtime="20210222 16:04:34.769"></status>
+</kw>
+<kw name="Get List Video Of Current Date In Video List Screen" library="Videos_List_Keyword">
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<doc>Returns number of elements matching ``xpath``</doc>
+<arguments>
+<arg>${VIDEOS_LIST_SCREEN__LIST_VIDEO}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210222 16:04:35.064" level="INFO">${count} = 4</msg>
+<status status="PASS" starttime="20210222 16:04:34.771" endtime="20210222 16:04:35.064"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20210222 16:04:35.066" level="INFO">${count} = 4</msg>
+<status status="PASS" starttime="20210222 16:04:35.065" endtime="20210222 16:04:35.066"></status>
+</kw>
+<status status="PASS" starttime="20210222 16:04:34.770" endtime="20210222 16:04:35.066"></status>
+</kw>
+<doc>NANACA-1012</doc>
+<status status="PASS" starttime="20210222 16:04:09.736" endtime="20210222 16:04:35.067" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20210222 16:03:18.820" endtime="20210222 16:04:35.070"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Videos List">Videos List</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

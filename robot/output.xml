@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210106 14:39:46.397" rpa="false">
+<suite id="s1" name="Edit Infor Child" source="C:\Users\ADMIN\PycharmProjects\robot\TestCase\Edit_Infor_Child.robot">
+<kw name="Open The Application And Login successfully" library="Common" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION} deviceName=${DEVICE_NAME} automationName=UiAutomator2</arg>
+<arg>newCommandTimeout=2500</arg>
+<arg>appActivity=${Activity_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 14:39:46.628" endtime="20210106 14:39:57.632"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_HOME_BUTTON}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 14:39:57.633" endtime="20210106 14:40:04.212"></status>
+</kw>
+<kw name="Click Login Button At Tutorial Screen" library="Common">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_HOME_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:04.214" level="INFO">Clicking element '//android.widget.TextView[@text='ログイン']'.</msg>
+<status status="PASS" starttime="20210106 14:40:04.212" endtime="20210106 14:40:04.366"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_EMAIL_TEXTBOX}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 14:40:04.366" endtime="20210106 14:40:05.690"></status>
+</kw>
+<status status="PASS" starttime="20210106 14:40:04.212" endtime="20210106 14:40:05.691"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_HOME_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:05.694" level="INFO">Clicking element '//android.widget.TextView[@text='ログイン']'.</msg>
+<status status="PASS" starttime="20210106 14:40:05.691" endtime="20210106 14:40:05.849"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_EMAIL_TEXTBOX}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 14:40:05.849" endtime="20210106 14:40:05.946"></status>
+</kw>
+<kw name="Input Email In Login Screen" library="Login_Keyword">
+<arguments>
+<arg>${Correct_Email_Input}</arg>
+</arguments>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_EMAIL_TEXTBOX}</arg>
+<arg>${email_text}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:05.950" level="INFO">Typing text 'hien.codecomplete@gmail.com' into text field '//android.widget.TextView[@text='パスワード']/preceding::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText'</msg>
+<status status="PASS" starttime="20210106 14:40:05.947" endtime="20210106 14:40:06.117"></status>
+</kw>
+<status status="PASS" starttime="20210106 14:40:05.947" endtime="20210106 14:40:06.118"></status>
+</kw>
+<kw name="Input Password In Login Screen" library="Login_Keyword">
+<arguments>
+<arg>123456aA</arg>
+</arguments>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_PASSWORD_TEXTBOX}</arg>
+<arg>${password_text}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:06.121" level="INFO">Typing password into text field '//android.widget.TextView[@text='パスワード']/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText'</msg>
+<status status="PASS" starttime="20210106 14:40:06.119" endtime="20210106 14:40:07.388"></status>
+</kw>
+<status status="PASS" starttime="20210106 14:40:06.118" endtime="20210106 14:40:07.388"></status>
+</kw>
+<kw name="Click Login Button" library="Login_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_SCREEN_LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:07.392" level="INFO">Clicking element '//android.widget.ScrollView//android.widget.TextView[@text='ログイン']'.</msg>
+<status status="PASS" starttime="20210106 14:40:07.389" endtime="20210106 14:40:07.990"></status>
+</kw>
+<status status="PASS" starttime="20210106 14:40:07.388" endtime="20210106 14:40:07.990"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${HOME_SCREEN_ALLOW_BUTTON}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 14:40:07.990" endtime="20210106 14:40:14.246"></status>
+</kw>
+<kw name="Click Allow Button" library="Login_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${HOME_SCREEN_ALLOW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:14.250" level="INFO">Clicking element '//android.widget.Button[@text='ALLOW']'.</msg>
+<status status="PASS" starttime="20210106 14:40:14.247" endtime="20210106 14:40:14.349"></status>
+</kw>
+<status status="PASS" starttime="20210106 14:40:14.246" endtime="20210106 14:40:14.349"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${HOME_SCREEN_ALLOW_BUTTON}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 14:40:14.349" endtime="20210106 14:40:14.549"></status>
+</kw>
+<kw name="Click Allow Button" library="Login_Keyword">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${HOME_SCREEN_ALLOW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210106 14:40:14.554" level="INFO">Clicking element '//android.widget.Button[@text='ALLOW']'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210106 14:40:16.045" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210106 14:40:15.090" endtime="20210106 14:40:16.045"></status>
+</kw>
+<msg timestamp="20210106 14:40:16.048" level="FAIL">ValueError: Element locator '//android.widget.Button[@text='ALLOW']' did not match any elements.</msg>
+<status status="FAIL" starttime="20210106 14:40:14.550" endtime="20210106 14:40:16.048"></status>
+</kw>
+<status status="FAIL" starttime="20210106 14:40:14.549" endtime="20210106 14:40:16.048"></status>
+</kw>
+<status status="FAIL" starttime="20210106 14:39:46.628" endtime="20210106 14:40:16.049"></status>
+</kw>
+<test id="s1-t1" name="Verify that Edit Information Children Is Show When Click In Name Child Field">
+<status status="FAIL" starttime="20210106 14:40:16.049" endtime="20210106 14:40:16.050" critical="yes">Parent suite setup failed:
+ValueError: Element locator '//android.widget.Button[@text='ALLOW']' did not match any elements.</status>
+</test>
+<status status="FAIL" starttime="20210106 14:39:46.398" endtime="20210106 14:40:16.052">Suite setup failed:
+ValueError: Element locator '//android.widget.Button[@text='ALLOW']' did not match any elements.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Edit Infor Child">Edit Infor Child</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
